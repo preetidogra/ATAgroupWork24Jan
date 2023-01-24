@@ -16,6 +16,7 @@ pipeline {
 		 
     ])
            	checkout scm
+		echo 'done Checkout'
 		
         }
     }
