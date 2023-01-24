@@ -26,7 +26,7 @@ pipeline {
         withMaven {
       	bat "mvn clean verify"
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
-			
+		echo 'Done build'	
 		}}
 	
 			  
@@ -43,7 +43,7 @@ pipeline {
 			   ]) 
 		cucumber buildStatus: "UNSTABLE",
 		fileIncludePattern: "**/*.json",
-                jsonReportDirectory: 'target/JSonReports.json'}}
+                jsonReportDirectory: 'target\JSonReports'}}
 	  
 
 }
